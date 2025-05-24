@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Prasun Timalsina</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0f2d4a;
+      color: #ffffff;
+    }
+
+    nav {
+      background: #1e3a8a;
+      padding: 10px 30px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-left img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      list-style: none;
+    }
+
+    nav ul li a {
+      color: rgb(247, 242, 242);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #2c3642;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      padding-top: 120px;
+      padding-bottom: 60px;
+      background: linear-gradient(to right, #2563eb, #1e40af);
+      color: rgb(245, 242, 242);
+    }
+
+    .profile-img {
+      flex: 1;
+      max-width: 250px;
+      text-align: center;
+    }
+
+    .profile-img img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 4px solid rgb(246, 240, 240);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    .intro {
+      flex: 2;
+      max-width: 600px;
+    }
+
+    .intro h1 {
+      font-size: 2.5rem;
+    }
+
+    .intro p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-size: 2rem;
+      color: #1e3a8a;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    section h2::after {
+      content: '';
+      width: 50px;
+      height: 4px;
+      background: #3b82f6;
+      display: block;
+      margin-top: 10px;
+    }
+
+    p, ul li {
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin: 5px 15px 0 0;
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background: #1e3a8a;
+      color: rgb(235, 230, 230);
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+      }
+
+      .intro h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-left">
+    <img src="pic.jpg" alt="Logo" />
+  </div>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<header data-aos="fade-up">
+  <div class="profile-img">
+    <img src="pic.jpg" alt="Profile Picture" />
+  </div>
+  <div class="intro">
+    <h1>Prasun Timalsina</h1>
+    <p>Aspiring IT Professional | Networking | Software Development</p>
+  </div>
+</header>
+
+<section id="about" data-aos="fade-up">
+  <h2>About Me</h2>
+  <p>
+    I am a passionate Bachelor of Information Technology student with experience in computer networking, software development, and case study analysis. I enjoy creating solutions that combine logical thinking and creativity. Always learning, always growing!
+  </p>
+</section>
+
+<section id="skills" data-aos="fade-left">
+  <h2>Skills</h2>
+  <ul>
+    <li>Programming: Python, HTML/CSS, C, JavaScript</li>
+    <li>Networking: DHCP, IPv6, Routing Protocols, HSRP</li>
+    <li>Tools: Cisco Packet Tracer, Git, VS Code</li>
+    <li>Soft Skills: Communication, Teamwork, Problem Solving</li>
+  </ul>
+</section>
+
+<section id="projects" data-aos="fade-right">
+  <h2>Projects</h2>
+  <ul>
+    <li><strong>Network Design Project</strong> – Simulated IPv6 + HSRP setup for XYZ Company</li>
+    <li><strong>Quiz Application</strong> – Python MCQ quiz with scoring and grading</li>
+    <li><strong>Custom vs Pre-Built PC Study</strong> – Comparative cost and performance analysis</li>
+    <li><strong>Remote Work Communication</strong> – Business English case study on cross-cultural strategies</li>
+  </ul>
+</section>
+
+<section id="contact" data-aos="fade-up">
+  <h2>Contact</h2>
+  <p>Feel free to reach out!</p>
+  <div class="contact">
+    <a href="prasuntimalsina6@gimal.com">Email</a>
+    <a href="https://linkedin.com">LinkedIn</a>
+    <a href="https://github.com">GitHub</a>
+  </div>
+</section>
+
+<div class="footer">
+  &copy; 2025 Prasun Timalsina. All rights reserved.
+</div>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+
+</body>
+</html>
